@@ -105,23 +105,6 @@ class Home extends StatelessWidget {
                       color: tmBlue,
                     ),
                   ),
-                  // Container(
-                  //   margin: EdgeInsets.symmetric(horizontal: 10),
-                  //   width: 200,
-                  //   child: const Center(
-                  //     child: Text(
-                  //       'List 2',
-                  //       style: TextStyle(
-                  //         fontSize: 18,
-                  //         color: Colors.white,
-                  //       ),
-                  //     ),
-                  //   ),
-                  //   decoration: BoxDecoration(
-                  //     borderRadius: BorderRadius.circular(10.0),
-                  //     color: tmRed,
-                  //   ),
-                  // ),
                   TaskCard(),
                   Container(
                     margin: EdgeInsets.symmetric(horizontal: 10),

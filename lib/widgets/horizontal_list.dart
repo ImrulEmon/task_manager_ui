@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:task_manager_ui/constants/colors.dart';
+import 'package:task_manager_ui/widgets/todo_card.dart';
 
 class TaskCard extends StatelessWidget {
   const TaskCard({super.key});
@@ -12,13 +11,39 @@ class TaskCard extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 10),
       width: 200,
-      child: const Center(
-        child: Text(
-          'List 2',
-          style: TextStyle(
-            fontSize: 18,
-            color: Colors.white,
-          ),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(
+              height: 10.0,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      'My Tasks',
+                      style: TextStyle(color: Colors.white, fontSize: 24.0),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
+            Divider(
+              color: Colors.white,
+              thickness: 2.0,
+              indent: 60.0,
+            ),
+            TodoCard(),
+            TodoCard(),
+            TodoCard(),
+            TodoCard(),
+          ],
         ),
       ),
       decoration: BoxDecoration(
